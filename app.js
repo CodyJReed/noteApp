@@ -1,5 +1,6 @@
 console.log("starting app.js");
 
+const _ = require("lodash");
 const fs = require("fs");
 const os = require("os");
 const notes = require("./notes.js");
