@@ -18,5 +18,8 @@
   "homepage": "https://github.com/CodyJReed/noteApp#readme",
   "devDependencies": {
     "lodash": "^4.17.11"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.9"
   }
 }
