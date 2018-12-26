@@ -5,8 +5,11 @@ const fs = require("fs");
 const os = require("os");
 const notes = require("./notes.js");
 
-console.log(_.isString(true));
-console.log(_.isString("Cody"));
+// console.log(_.isString(true));
+// console.log(_.isString("Cody"));
+
+let filteredArray = _.uniq(["Cody", "Cody", 1, 2, 3, 4, 1]);
+console.log(filteredArray);
 // // let user = os.userInfo();
 // //
 // // // Updates or creates a "greetings" .txt file.
