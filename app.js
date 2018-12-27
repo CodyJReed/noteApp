@@ -3,10 +3,36 @@ const fs = require("fs");
 const yargs = require("yargs");
 
 const notes = require("./notes.js");
+// Command line Options
+const titleOptions = {
+  describe: "Title of note",
+  demand: true,
+  alias: "t"
+};
+const bodyOptions = {
+  describe: "Body of note",
+  demand: true,
+  alias: "b"
+};
+// Command line INPUT using yargs
+const argv = yargs
+  .command("add", "Add a new note", {
+    title: titleOptions,
+    body: bodyOptions
+  })
+  .command("list", "List all notes")
+  .command("read", "Read a note", {
+    title: titleOptions
+  })
+  .command("remove", "Remove a note", {
+    title: titleOptions
+  })
+  .help().argv;
 
-const argv = yargs.argv;
+// Store user input from CLI in "command"
 let command = argv._[0];
 
+// Check "command" value for condition
 switch (command) {
   case "add":
     var note = notes.addNote(argv.title, argv.body);
