@@ -13,7 +13,7 @@ console.log("Yargs", argv);
 
 switch (command) {
   case "add":
-    let note = notes.addNote(argv.title, argv.body);
+    var note = notes.addNote(argv.title, argv.body);
     if (note) {
       console.log("Note added.");
       notes.logNote(note);
@@ -27,10 +27,10 @@ switch (command) {
     break;
 
   case "read":
-    let noteToRead = notes.getNote(argv.title);
-    if (noteToRead) {
+    note = notes.getNote(argv.title);
+    if (note) {
       console.log("Note Read.");
-      notes.logNote(noteToRead);
+      notes.logNote(note);
     } else {
       console.log("Note not found.");
     }
