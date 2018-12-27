@@ -17,5 +17,6 @@ The application is written using vanilla JS(ES6), Node.js(v11) and the following
  <li>create and store (add)</li>
  <li>read</li>
  <li>and remove notes</li>
+ </ul>
  
- via Node.js and the CLI or terminal window</p>
+ This is accomplished via Node.js and the CLI or terminal window</p>
